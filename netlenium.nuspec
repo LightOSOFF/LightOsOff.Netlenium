@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Netlenium</id>
+    <version>1.0.1</version>
+    <title>Netlenium Wrapper</title>
+    <authors>Intellivoid</authors>
+    <owners>Intellivoid</owners>
+    <iconUrl>https://i.imgur.com/ZXeKKHp.png</iconUrl>
+    <license type="file">LICENSE.txt</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Automates Chrome, Firefox or Opera using Netlenium</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <projectUrl>https://github.com/intellivoid/Netlenium-.NET-Wrapper</projectUrl>
+    <dependencies>
+    	<dependency id="Newtonsoft.Json" version="12.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+      <file src="LICENSE.txt" target="" />
+  </files>
+</package>
