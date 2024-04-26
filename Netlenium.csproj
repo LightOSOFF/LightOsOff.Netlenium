@@ -7,8 +7,8 @@
     <ProjectGuid>{14FF0094-5A18-4CA7-BB0C-72A019911C8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intellivoid.Netlenium</RootNamespace>
-    <AssemblyName>Intellivoid.Netlenium</AssemblyName>
+    <RootNamespace>LightOsOff.Netlenium</RootNamespace>
+    <AssemblyName>LightOsOff.Netlenium</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
