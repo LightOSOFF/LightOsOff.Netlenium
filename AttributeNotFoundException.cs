@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Intellivoid.Netlenium
+namespace LightOsOff.Netlenium
 {
     /// <summary>
     /// The attribute was not found in the element

@@ -26,7 +26,7 @@ namespace Intellivoid.Netlenium
         /// <summary>
         /// The driver that the session is currently using
         /// </summary>
-        public DriverType Driver { get; internal set; } 
+        public DriverType Driver { get; internal set; }
 
         /// <summary>
         /// Indicates if this session is running in headless mode

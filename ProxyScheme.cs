@@ -3,7 +3,7 @@
     /// <summary>
     /// Proxy Scheme
     /// </summary>
-    public enum ProxyScheme 
+    public enum ProxyScheme
     {
         http = 0,
         https = 1

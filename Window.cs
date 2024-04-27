@@ -1,5 +1,5 @@
 ﻿namespace Intellivoid.Netlenium
-{ 
+{
     /// <summary>
     /// The active window details
     /// </summary>

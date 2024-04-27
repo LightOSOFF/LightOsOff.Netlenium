@@ -49,7 +49,7 @@ namespace Intellivoid.Netlenium
             {
                 try
                 {
-                    
+
                     var response = JObject.Parse(SendCommand("window_handler/current_window", true));
                     return new Window
                     {
@@ -81,7 +81,7 @@ namespace Intellivoid.Netlenium
                     var response = JObject.Parse(SendCommand(string.Empty));
                     DriverType defaultDriver;
 
-                    switch((string)response["ServerDetails"]["DefaultDriver"])
+                    switch ((string)response["ServerDetails"]["DefaultDriver"])
                     {
                         case "chrome":
                             defaultDriver = DriverType.chrome;
@@ -122,7 +122,7 @@ namespace Intellivoid.Netlenium
                 return null;
             }
         }
-       
+
         /// <summary>
         /// Public Constructor with the Default Driver
         /// </summary>
@@ -240,12 +240,12 @@ namespace Intellivoid.Netlenium
         /// <returns></returns>
         internal string SendCommand(string command, Dictionary<string, string> parameters, bool include_session = false)
         {
-            if(AuthenticationPassword != null)
+            if (AuthenticationPassword != null)
             {
                 parameters.Add("auth", AuthenticationPassword);
             }
 
-            if(include_session == true)
+            if (include_session == true)
             {
                 if (SessionID == null)
                 {
@@ -280,11 +280,11 @@ namespace Intellivoid.Netlenium
             {
                 parsedInput = JObject.Parse(input);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception($"Cannot parse '{input}', {ex.Message}");
             }
-            
+
 
             switch ((int)parsedInput["ErrorCode"])
             {
@@ -341,7 +341,7 @@ namespace Intellivoid.Netlenium
 
                 case 116:
                     throw new ElementNotFoundException((string)parsedInput["Message"]);
-                
+
                 default:
                     throw new Exception(input);
 
@@ -358,13 +358,13 @@ namespace Intellivoid.Netlenium
                 var payload = new Dictionary<string, string>();
 
                 if (TargetDriver != DriverType.auto)
-                { 
+                {
                     payload.Add("target_driver", target_driver.ToString().ToLower());
                 }
 
-                if(ProxyConfiguration != null)
+                if (ProxyConfiguration != null)
                 {
-                    if(ProxyConfiguration.Enabled == true)
+                    if (ProxyConfiguration.Enabled == true)
                     {
                         payload.Add("proxy_host", ProxyConfiguration.Host);
                         payload.Add("proxy_port", Convert.ToString(ProxyConfiguration.Port));
@@ -382,7 +382,7 @@ namespace Intellivoid.Netlenium
                 session_id = (string)response["SessionId"];
 
             }
-            catch(RequestException requestException)
+            catch (RequestException requestException)
             {
                 ParseError(requestException.ResultsContent);
             }
@@ -403,7 +403,7 @@ namespace Intellivoid.Netlenium
                 ParseError(requestException.ResultsContent);
             }
         }
-        
+
         /// <summary>
         /// Navigates to the given URL
         /// </summary>
@@ -491,8 +491,8 @@ namespace Intellivoid.Netlenium
                 var returnResults = new List<Element>();
                 foreach (var jToken in elements)
                 {
-                    var elementItem = (JObject) jToken;
-                    returnResults.Add(new Element(this, by, value,  elements.IndexOf(elementItem))
+                    var elementItem = (JObject)jToken;
+                    returnResults.Add(new Element(this, by, value, elements.IndexOf(elementItem))
                     {
                         Enabled = (bool)elementItem["Enabled"],
                         IsSelected = (bool)elementItem["IsSelected"],
@@ -516,7 +516,7 @@ namespace Intellivoid.Netlenium
             }
             catch (RequestException requestException)
             {
-                ParseError(requestException.ResultsContent); 
+                ParseError(requestException.ResultsContent);
             }
 
             return null;
@@ -532,7 +532,7 @@ namespace Intellivoid.Netlenium
         {
             var results = GetElements(by, value);
 
-            if(results.Count == 0)
+            if (results.Count == 0)
             {
                 throw new ElementNotFoundException();
             }

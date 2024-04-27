@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace Intellivoid.Netlenium
+﻿namespace Intellivoid.Netlenium
 {
     /// <summary>
     /// By attribute for searching elements

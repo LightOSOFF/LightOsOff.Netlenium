@@ -1,2 +1,11 @@
 .vscode/
 .fake
+*.v2
+
+*.vsidx
+
+.vs/LightOsOff.Netlenium/v17/
+
+.vs/VSWorkspaceState.json
+
+.vs/slnx.sqlite
